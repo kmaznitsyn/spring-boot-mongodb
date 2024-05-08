@@ -27,7 +27,6 @@ public class Recipe extends Identifier {
     private Byte[] image;
     private Difficulty difficulty;
 
-    @DBRef
     private Notes notes;
 
     @DBRef
@@ -36,12 +35,12 @@ public class Recipe extends Identifier {
     public void setNotes(Notes notes) {
         if (notes != null) {
             this.notes = notes;
-            notes.setRecipe(this);
+            //notes.setRecipe(this);
         }
     }
 
     public Recipe addIngredient(Ingredient ingredient){
-        ingredient.setRecipe(this);
+        //ingredient.setRecipe(this);
         this.ingredients.add(ingredient);
         return this;
     }
